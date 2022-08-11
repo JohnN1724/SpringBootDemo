@@ -73,7 +73,61 @@ class VetsApplicationTests {
 
 		FlyingRat rat = new FlyingRat();
 
-		assertEquals("Poop time!!", rat.isPooping, rat.isPooping);
+		assertEquals("Poop time!!", rat.ISPOOPING, rat.ISPOOPING);
+	}
+
+	@Test
+	public void get_living_status(){
+
+		FlyingRat rat = new FlyingRat();
+
+		assertEquals("I am alive!!", rat.ISALIVE, rat.ISALIVE);
+	}
+
+	@Test
+	public void get_sleeping(){
+
+		Penguin penguin = new Penguin();
+
+		assertEquals("zzz...zzz...", penguin.ISSLEEPING, penguin.ISSLEEPING);
+	}
+
+	@Test
+	public void get_breathing(){
+
+		Penguin penguin = new Penguin();
+
+		assertEquals("Deep Breath!", penguin.ISBREATHING, penguin.ISBREATHING);
+	}
+
+	@Test
+	public void get_eating(){
+
+		Cat cat = new Cat();
+
+		assertEquals("This food is great!", cat.ISEATING, cat.ISEATING);
+	}
+
+	@Test
+	public void test_swimming(){
+
+		Penguin penguin = new Penguin();
+
+		assertEquals("Diving!! *Splash*", penguin.dive(), penguin.dive());
+		assertEquals("I'm swimming!!", penguin.swim(), penguin.swim());
+		assertEquals("I'm getting out of the water'!!", penguin.getOutWater(), penguin.getOutWater());
+
+	}
+
+	@Test
+	public void test_flying(){
+
+		FlyingRat rat = new FlyingRat();
+
+		assertEquals("Taking off!!", rat.takeOff(), rat.takeOff());
+		assertEquals("I'm flying!!", rat.flying(), rat.flying());
+		assertEquals("I am landing!!", rat.landing(), rat.landing());
+
 	}
 
 }
