@@ -13,7 +13,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_cat_name() {
+	public void get_default_cat_name() {
 
 		Cat cat = new Cat();
 
@@ -42,6 +42,38 @@ class VetsApplicationTests {
 		Penguin penguin = new Penguin();
 
 		assertEquals("I'm swimming!!", penguin.swim());
+	}
+
+	@Test
+	public void get_default_penguin_name() {
+
+		Penguin penguin = new Penguin();
+
+		assertEquals("Pete", penguin.getName(), penguin.getName());
+	}
+
+	@Test
+	public void get_default_bat_name() {
+
+		Bat bat = new Bat();
+
+		assertEquals("Boris", bat.getName(), bat.getName());
+	}
+
+	@Test
+	public void get_live_birth(){
+
+		Cat cat = new Cat();
+
+		assertEquals("Performing a live birth!", cat.getLiveBrith(), cat.getLiveBrith());
+	}
+
+	@Test
+	public void get_poop(){
+
+		FlyingRat rat = new FlyingRat();
+
+		assertEquals("Poop time!!", rat.isPooping, rat.isPooping);
 	}
 
 }

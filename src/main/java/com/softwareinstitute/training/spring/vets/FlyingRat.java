@@ -12,6 +12,14 @@ public class FlyingRat extends Bird implements Flying{
         this.flyingRatType = flyingRatType;
     }
 
+    public FlyingRat(){
+        super("Bird", "FlyingRat");
+
+        this.name = "Perry";
+        this.flyingRatType = "Pigeon";
+
+    }
+
     public String getName() {
         return name;
     }
