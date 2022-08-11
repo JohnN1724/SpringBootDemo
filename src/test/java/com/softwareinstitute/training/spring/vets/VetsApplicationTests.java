@@ -9,11 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class VetsApplicationTests {
 
 	@Test
-	void contextLoads() {
-	}
-
-	@Test
-	public void get_default_cat_name() {
+	void get_default_cat_name() {
 
 		Cat cat = new Cat();
 
@@ -21,7 +17,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_bat_flying(){
+	void get_bat_flying(){
 
 		Bat bat = new Bat();
 
@@ -29,7 +25,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_bird_layingEgg() {
+	void get_bird_layingEgg() {
 
 		Penguin penguin = new Penguin();
 
@@ -37,7 +33,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_penguin_swimming() {
+	void get_penguin_swimming() {
 
 		Penguin penguin = new Penguin();
 
@@ -45,7 +41,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_default_penguin_name() {
+	void get_default_penguin_name() {
 
 		Penguin penguin = new Penguin();
 
@@ -53,7 +49,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_default_bat_name() {
+	void get_default_bat_name() {
 
 		Bat bat = new Bat();
 
@@ -61,7 +57,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_live_birth(){
+	void get_live_birth(){
 
 		Cat cat = new Cat();
 
@@ -69,7 +65,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_poop(){
+	void get_poop(){
 
 		FlyingRat rat = new FlyingRat();
 
@@ -77,7 +73,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_living_status(){
+	void get_living_status(){
 
 		FlyingRat rat = new FlyingRat();
 
@@ -85,7 +81,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_sleeping(){
+	void get_sleeping(){
 
 		Penguin penguin = new Penguin();
 
@@ -93,7 +89,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_breathing(){
+	void get_breathing(){
 
 		Penguin penguin = new Penguin();
 
@@ -101,7 +97,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void get_eating(){
+	void get_eating(){
 
 		Cat cat = new Cat();
 
@@ -109,7 +105,7 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void test_swimming(){
+	void test_swimming(){
 
 		Penguin penguin = new Penguin();
 
@@ -120,13 +116,47 @@ class VetsApplicationTests {
 	}
 
 	@Test
-	public void test_flying(){
+	void test_flying(){
 
 		FlyingRat rat = new FlyingRat();
 
 		assertEquals("Taking off!!", rat.takeOff(), rat.takeOff());
 		assertEquals("I'm flying!!", rat.flying(), rat.flying());
 		assertEquals("I am landing!!", rat.landing(), rat.landing());
+
+	}
+
+	@Test
+	void test_cat_getters_and_setters(){
+
+		Cat cat = new Cat("Mammal", "Cat", "Persian", "Boop");
+
+		assertEquals("Boop", cat.getName(), cat.getName());
+
+		// Testing set method for name
+		cat.setName("Beep");
+		assertEquals("Beep", cat.getName(), cat.getName());
+
+		// Testing set method for catType
+		cat.setCatType("Tabby");
+		assertEquals("Tabby", cat.getCatType(), cat.getCatType());
+
+	}
+
+	@Test
+	void test_bat_getters_and_setters(){
+
+		Bat bat = new Bat("Mammal", "Bat", "Vampire", "Boris");
+
+		assertEquals("Boris", bat.getName(), bat.getName());
+
+		// Testing set method for name
+		bat.setName("Benjamin");
+		assertEquals("Benjamin", bat.getName(), bat.getName());
+
+		// Testing set method for batType
+		bat.setBatType("Fruit");
+		assertEquals("Fruit", bat.getBatType(), bat.getBatType());
 
 	}
 
