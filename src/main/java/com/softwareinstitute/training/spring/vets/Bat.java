@@ -34,4 +34,12 @@ public class Bat extends Mammal implements Flying{
     public void setBatType(String batType) {
         this.batType = batType;
     }
+
+    @Override
+    public String toString() {
+        return "Bat{" +
+                "name='" + name + '\'' +
+                ", batType='" + batType + '\'' +
+                '}';
+    }
 }

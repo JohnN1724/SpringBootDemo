@@ -23,4 +23,10 @@ public class Animal {
         this.animalType = animalType;
     }
 
+    @Override
+    public String toString() {
+        return "Animal{" +
+                ", animalType='" + animalType + '\'' +
+                '}';
+    }
 }

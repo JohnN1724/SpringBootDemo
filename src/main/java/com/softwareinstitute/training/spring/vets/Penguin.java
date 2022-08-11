@@ -34,5 +34,13 @@ public class Penguin extends Bird implements Swimming{
     public void setPenguinType(String penguinType) {
         this.penguinType = penguinType;
     }
+
+    @Override
+    public String toString() {
+        return "Penguin{" +
+                "name='" + name + '\'' +
+                ", penguinType='" + penguinType + '\'' +
+                '}';
+    }
 }
 

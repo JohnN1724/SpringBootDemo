@@ -35,4 +35,12 @@ public class FlyingRat extends Bird implements Flying{
     public void setFlyingRatType(String flyingRatType) {
         this.flyingRatType = flyingRatType;
     }
+
+    @Override
+    public String toString() {
+        return "FlyingRat{" +
+                "name='" + name + '\'' +
+                ", flyingRatType='" + flyingRatType + '\'' +
+                '}';
+    }
 }

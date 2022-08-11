@@ -5,16 +5,16 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VetsList {
+public class CatList {
 
-    private List<VetsList> animalList = new ArrayList();
+    private List<Cat> animalList = new ArrayList();
 
 
     public void animalList(){
-        this.animalList.add(new VetsList());
+        this.animalList.add(new Cat("Mammal", "Cat", "Tabby", "Fluffy"));
     }
 
-    public List<VetsList> getAnimalList(){
+    public List<Cat> getAnimalList(){
         return this.animalList;
     }
 
@@ -23,11 +23,11 @@ public class VetsList {
         return  json;
     }
 
-    public void addVetsList(VetsList v){
-        this.animalList.add(v);
+    public void addCatList(Cat c){
+        this.animalList.add(c);
     }
 
-    public void changeVetsList(int id,VetsList v){
-        this.animalList.set(id,v);
+    public void changeCatList(int id,Cat c){
+        this.animalList.set(id,c);
     }
 }

@@ -26,4 +26,12 @@ public class Bird extends Animal{
     public void setLayEgg(String layEgg) {
         this.layEgg = layEgg;
     }
+
+    @Override
+    public String toString() {
+        return "Bird{" +
+                "birdName='" + birdName + '\'' +
+                ", layEgg='" + layEgg + '\'' +
+                '}';
+    }
 }

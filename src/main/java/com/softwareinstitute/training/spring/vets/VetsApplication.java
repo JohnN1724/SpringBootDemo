@@ -2,10 +2,7 @@ package com.softwareinstitute.training.spring.vets;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @SpringBootApplication
 public class VetsApplication {
@@ -14,11 +11,30 @@ public class VetsApplication {
 		SpringApplication.run(VetsApplication.class, args);
 	}
 
+	public static CatList myCatList = new CatList();
+
+
 	@CrossOrigin("http://localhost:3000")
-	@GetMapping("/makeCat")
+	@GetMapping("/customRoute")
+	@ResponseBody
 	public String myResponse(){
-		Cat cat = new Cat();
-		return cat.toString();
+		return myCatList.toString();
+	}
+
+	@PutMapping("/change/{id}")
+	@ResponseBody
+	public void change(@PathVariable int id, @RequestParam String Mammal, @RequestParam String animalType,
+					   @RequestParam String catType, @RequestParam String name) {
+		myCatList.changeCatList(id,new Cat());
+
+	}
+
+	@PutMapping("/add")
+	@ResponseBody
+	public void change(@RequestParam String Mammal, @RequestParam String animalType,
+					   @RequestParam String catType, @RequestParam String name) {
+		myCatList.addCatList(new Cat(Mammal, animalType, catType, name));
+
 	}
 
 }

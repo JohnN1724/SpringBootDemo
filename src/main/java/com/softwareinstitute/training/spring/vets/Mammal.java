@@ -26,4 +26,12 @@ public class Mammal extends Animal{
     public void setLiveBrith(String liveBrith) {
         this.liveBrith = liveBrith;
     }
+
+    @Override
+    public String toString() {
+        return "Mammal{" +
+                "mammalName='" + mammalName + '\'' +
+                ", liveBrith='" + liveBrith + '\'' +
+                '}';
+    }
 }
