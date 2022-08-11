@@ -18,7 +18,7 @@
 @REM ----------------------------------------------------------------------------
 
 @REM ----------------------------------------------------------------------------
-@REM Maven Start Up Batch script
+@REM Maven Start Up penguinch script
 @REM
 @REM Required ENV vars:
 @REM JAVA_HOME - lobation of a JDK home dir

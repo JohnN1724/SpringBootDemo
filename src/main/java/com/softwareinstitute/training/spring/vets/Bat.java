@@ -5,7 +5,7 @@ public class Bat extends Mammal implements Flying{
     private String name;
     private String batType;
 
-    public Bat(String animalType, String mammalName, String catType, String name){
+    public Bat(String animalType, String mammalName, String batType, String name){
         super(animalType, mammalName);
 
         this.name = name;

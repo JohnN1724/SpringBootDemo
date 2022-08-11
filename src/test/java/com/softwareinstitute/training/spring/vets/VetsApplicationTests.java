@@ -160,4 +160,38 @@ class VetsApplicationTests {
 
 	}
 
+	@Test
+	void test_penguin_getters_and_setters(){
+
+		Penguin penguin = new Penguin("Mammal", "Penguin", "Emperor", "Peter");
+
+		assertEquals("Peter", penguin.getName(), penguin.getName());
+
+		// Testing set method for name
+		penguin.setName("William");
+		assertEquals("William", penguin.getName(), penguin.getName());
+
+		// Testing set method for penguinType
+		penguin.setPenguinType("King");
+		assertEquals("King", penguin.getPenguinType(), penguin.getPenguinType());
+
+	}
+
+	@Test
+	void test_flyingRat_getters_and_setters(){
+
+		FlyingRat flyingRat = new FlyingRat("Mammal", "Flying Rat", "Pigeon", "Pete");
+
+		assertEquals("Pete", flyingRat.getName(), flyingRat.getName());
+
+		// Testing set method for name
+		flyingRat.setName("Sam");
+		assertEquals("Sam", flyingRat.getName(), flyingRat.getName());
+
+		// Testing set method for penguinType
+		flyingRat.setFlyingRatType("Seagull");
+		assertEquals("Seagull", flyingRat.getFlyingRatType(), flyingRat.getFlyingRatType());
+
+	}
+
 }
