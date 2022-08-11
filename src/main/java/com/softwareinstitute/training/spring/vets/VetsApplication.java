@@ -14,7 +14,7 @@ public class VetsApplication {
 	public static CatList myCatList = new CatList();
 
 
-	@CrossOrigin("http://localhost:3000")
+	@CrossOrigin("http://localhost:8080")
 	@GetMapping("/customRoute")
 	@ResponseBody
 	public String myResponse(){
