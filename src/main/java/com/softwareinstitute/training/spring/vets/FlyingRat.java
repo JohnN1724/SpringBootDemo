@@ -5,7 +5,7 @@ public class FlyingRat extends Bird implements Flying{
     private String name;
     private String flyingRatType;
 
-    public FlyingRat(String animalType, String birdName, String name, String flyingRatType){
+    public FlyingRat(String animalType, String birdName, String flyingRatType, String name){
         super(animalType, birdName);
 
         this.name = name;

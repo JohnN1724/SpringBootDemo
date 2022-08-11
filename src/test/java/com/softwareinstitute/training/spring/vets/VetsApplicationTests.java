@@ -146,7 +146,7 @@ class VetsApplicationTests {
 	@Test
 	void test_bat_getters_and_setters(){
 
-		Bat bat = new Bat("Mammal", "Bat", "Vampire", "Boris");
+		Bat bat = new Bat("Mammal", "Bat", "Boris", "Vampire");
 
 		assertEquals("Boris", bat.getName(), bat.getName());
 
@@ -163,7 +163,7 @@ class VetsApplicationTests {
 	@Test
 	void test_penguin_getters_and_setters(){
 
-		Penguin penguin = new Penguin("Mammal", "Penguin", "Emperor", "Peter");
+		Penguin penguin = new Penguin("Mammal", "Penguin", "Peter", "Emperor");
 
 		assertEquals("Peter", penguin.getName(), penguin.getName());
 
